@@ -11,7 +11,6 @@ def ResumeTask(task):
         subName = d.task
         while di.CACHE_DEPS[id][subName] == di.NOT_END:
             time.sleep(0.1)
-            print "waiting"
         deps.append(di.CACHE_DEPS[id][subName])
 
 

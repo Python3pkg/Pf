@@ -1,4 +1,4 @@
-from Pf import *
+from __init__ import *
 import time
 
 def echo(buff, deps, meta):
@@ -20,11 +20,11 @@ def sleep(buff, deps, meta):
 Register("Echo", echo)
 Register("EchoP", echo_prev)
 Register("Sleep", sleep)
-# AddTask("T1", ["Echo", "Echo"])
-# AddTask("TT", ["Echo", "EchoP"])
-# Run()
-#
-# Clear()
+AddTask("T1", ["Echo", "Echo"])
+AddTask("TT", ["Echo", "EchoP"])
+Run()
+
+Clear()
 
 AddTask("T1",["Sleep"])
 AddTask("T2", [["Echo", "helloworld"], "EchoP"])

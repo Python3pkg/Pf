@@ -1,15 +1,15 @@
-from __init__ import *
+from .__init__ import *
 import time
 
 def echo(buff, deps, meta):
-    print "In the {0} (thread {1})".format(meta.Name, meta.ID)
-    print meta.Opt, meta.ID
+    print("In the {0} (thread {1})".format(meta.Name, meta.ID))
+    print(meta.Opt, meta.ID)
     return END
 
 
 def echo_prev(buff, deps, meta):
-    print "In the {0} (thread {1})".format(meta.Name, meta.ID)
-    print buff, deps, meta.ID
+    print("In the {0} (thread {1})".format(meta.Name, meta.ID))
+    print(buff, deps, meta.ID)
     return END
 
 def sleep(buff, deps, meta):

@@ -1,6 +1,6 @@
 from threading import Thread
-import di
-from Threads import *
+from . import di
+from .Threads import *
 import time
 
 
